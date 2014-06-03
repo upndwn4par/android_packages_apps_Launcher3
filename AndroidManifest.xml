@@ -132,7 +132,7 @@
 
         <activity
             android:name="com.android.launcher3.LauncherPreferencesActivity"
-            android:theme="@android:style/Theme.Holo.Light"
+            android:theme="@android:style/Theme.Holo"
             android:excludeFromRecents="true">
         </activity>
 
