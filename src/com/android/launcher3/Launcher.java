@@ -1070,7 +1070,7 @@ public class Launcher extends Activity
     }
 
     protected boolean hasSettings() {
-        return false;
+        return true;
     }
 
     protected void startSettings() {

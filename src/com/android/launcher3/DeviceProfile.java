@@ -19,6 +19,7 @@ package com.android.launcher3;
 import android.appwidget.AppWidgetHostView;
 import android.content.ComponentName;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.graphics.Paint;
@@ -77,6 +78,7 @@ public class DeviceProfile {
     boolean isLargeTablet;
     boolean isLayoutRtl;
     boolean transposeLayoutWithOrientation;
+    boolean showSearchBar;
 
     int desiredWorkspaceLeftRightMarginPx;
     int edgeMarginPx;
@@ -382,6 +384,26 @@ public class DeviceProfile {
         availableHeightPx = ahPx;
 
         updateAvailableDimensions(context);
+    }
+
+    void updateFromPreferences(SharedPreferences prefs) {
+        int prefNumColumns = prefs.getInt(LauncherPreferences.KEY_WORKSPACE_COLS, 0);
+        if(prefNumColumns > 0) {
+            numColumns = prefNumColumns;
+        }
+
+        int prefNumRows = prefs.getInt(LauncherPreferences.KEY_WORKSPACE_ROWS, 0);
+        if(prefNumRows > 0) {
+            numRows = prefNumRows;
+        }
+
+        showSearchBar = prefs.getBoolean(LauncherPreferences.KEY_SHOW_SEARCHBAR, true);
+        if(showSearchBar) {
+            searchBarSpaceHeightPx = searchBarHeightPx + 2 * edgeMarginPx;
+        }
+        else {
+            searchBarSpaceHeightPx = 2 * edgeMarginPx;
+        }
     }
 
     private float dist(PointF p0, PointF p1) {

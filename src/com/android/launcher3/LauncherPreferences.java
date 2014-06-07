@@ -1,27 +1,41 @@
 package com.android.launcher3;
 
+import android.app.FragmentTransaction;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.Preference;
 import android.preference.PreferenceFragment;
+import android.preference.PreferenceScreen;
 import android.util.Log;
 
 public final class LauncherPreferences {
         public static final String KEY_WORKSPACE_ROWS = "pref_key_workspaceRows";
         public static final String KEY_WORKSPACE_COLS = "pref_key_workspaceCols";
-
         public static final String KEY_WORKSPACE_DEFAULT_PAGE = "pref_key_workspaceDefaultPage";
-
         public static final String KEY_SHOW_SEARCHBAR = "pref_key_showSearchBar";
 
         private static final String TAG = "LauncherPreferences";
 
+        /**
+         * Main Preferences fragment
+         */
         public static class PrefsFragment  extends PreferenceFragment {
+            private LauncherPreferencesActivity mContext;
+
+            public PrefsFragment() {
+
+            }
+
+            public PrefsFragment(LauncherPreferencesActivity context) {
+                mContext = context;
+            }
+
             @Override
             public void onCreate(Bundle savedInstanceState) {
                 super.onCreate(savedInstanceState);
 
                 // Load the preferences from an XML resource
-                addPreferencesFromResource(R.xml.preferences );
+                addPreferencesFromResource(R.xml.preferences);
 
                 SharedPreferences prefs = getPreferenceManager().getSharedPreferences();
 
@@ -46,7 +60,10 @@ public final class LauncherPreferences {
                 }
                 else {
                         Log.w(TAG, "No DynamicGrid to get default values!");
-            }
+                }
+                if (mContext == null) {
+                    mContext = (LauncherPreferencesActivity) getActivity();
+                }
             }
         }
 
