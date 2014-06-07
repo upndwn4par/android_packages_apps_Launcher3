@@ -28,6 +28,7 @@
     <string name="folder_name" msgid="7371454440695724752"></string>
     <!-- no translation found for wallpaper_instructions (563973358787555519) -->
     <skip />
+<<<<<<< HEAD
     <!-- no translation found for image_load_fail (2821429163328561136) -->
     <skip />
     <!-- no translation found for wallpaper_load_fail (1261270681127096352) -->
@@ -39,6 +40,11 @@
     <skip />
     <!-- no translation found for announce_selection (8338254712932127413) -->
     <skip />
+=======
+    <!-- no translation found for number_of_items_selected:zero (7464587177007785408) -->
+    <!-- no translation found for number_of_items_selected:one (142482526010824029) -->
+    <!-- no translation found for number_of_items_selected:other (1418352074806573570) -->
+>>>>>>> Import translations. DO NOT MERGE
     <!-- no translation found for wallpaper_delete (8095005658756613921) -->
     <skip />
     <!-- no translation found for pick_image (1272073934062909527) -->
@@ -171,7 +177,11 @@
     <skip />
     <!-- no translation found for first_run_cling_title (7257389003637362144) -->
     <skip />
+<<<<<<< HEAD
     <!-- no translation found for first_run_cling_description (6447072552696253358) -->
+=======
+    <!-- no translation found for first_run_cling_description (658815204153067813) -->
+>>>>>>> Import translations. DO NOT MERGE
     <skip />
     <string name="first_run_cling_custom_content_hint" msgid="6090628589029352439"></string>
     <string name="first_run_cling_search_bar_hint" msgid="5909062802402452582"></string>
@@ -179,11 +189,23 @@
     <skip />
     <!-- no translation found for workspace_cling_title (5626202359865825661) -->
     <skip />
+<<<<<<< HEAD
     <!-- no translation found for workspace_cling_move_item (528201129978005352) -->
     <skip />
     <!-- no translation found for folder_cling_title (3894908818693254164) -->
     <skip />
     <!-- no translation found for folder_cling_create_folder (6158215559475836131) -->
+=======
+    <!-- no translation found for workspace_cling_move_item (2243369117709858844) -->
+    <skip />
+    <!-- no translation found for all_apps_cling_title (34929250753095858) -->
+    <skip />
+    <!-- no translation found for all_apps_cling_add_item (400866858451850784) -->
+    <skip />
+    <!-- no translation found for folder_cling_title (294708344826056909) -->
+    <skip />
+    <!-- no translation found for folder_cling_create_folder (3245124301268588807) -->
+>>>>>>> Import translations. DO NOT MERGE
     <skip />
     <!-- no translation found for cling_dismiss (8962359497601507581) -->
     <skip />
